@@ -1,0 +1,42 @@
+header {
+  width: 96%;
+  padding: 30px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 35px;
+  background-color: rgb(95, 57, 231);
+  color: white;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(53, 236, 227);
+  font-size: 27px;
+  text-transform: uppercase;
+  width: 33%;
+}
+
+.link {
+  color: black;
+}
+
+section {
+  min-height: 100%;
+}
+
+footer {
+  width: 100%;
+  margin: 20px auto;
+  background-color: #666;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
