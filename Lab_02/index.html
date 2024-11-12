@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WDAI Lab 02</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>MAKENCZIZ.PL</h1>
+      <div>
+        <div class="clock" id="clock">15:59:23</div>
+      </div>
+      <script src="clock.js"></script>
+    </header>
+    <nav>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <a href="index.html" style="text-decoration: none">
+                <div class="link">HOME</div>
+              </a>
+            </th>
+            <th>
+              <a href="kontakt.html" style="text-decoration: none">
+                <div class="link">KONTAKT</div>
+              </a>
+            </th>
+            <th>
+              <a href="galeria.html" style="text-decoration: none">
+                <div class="link">GALERIA</div>
+              </a>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </nav>
+
+    <section>
+      <div id="main-form">
+        <h1 style="font-size: xxx-large">Jak bardzo jesteś głodny?</h1>
+        <img src="images/kucharz.jpg" style="width: 30%" /><br />
+        <label for="hunger-slider">1 - trochę, 10 - bardzo!</label><br />
+        <input
+          type="range"
+          class="slider"
+          id="hunger-slider"
+          min="1"
+          max="10"
+          value="5"
+          oninput="updateHungerLabel(this.value)"
+        /><br />
+        <label for="num-people">Ilość osób:</label>
+        <input
+          type="number"
+          id="num-people"
+          min="1"
+          value="1"
+          style="width: 50px"
+        />
+        <br />
+        <button onclick="generateRecipe()">Pokaż przepis</button>
+        <br />
+        <h1 id="hunger-label">Poziom głodu: 5</h1>
+      </div>
+
+      <div id="recipe-section" style="display: none">
+        <h2>Przepis na Twój głód!</h2>
+
+        <img src="images/mac-1.jpg" /><br />
+        Składniki:<br />
+        <ul id="recipe-list">
+          <!-- PRZEPIS -->
+        </ul>
+
+        Zacznij od ugotowania makaronu w posolonej wodzie. Z doświadczenia
+        powiem, że najlepszy jest makaron w kształcie muszelek lub kolanek.
+        (Spagetti za ciężko wymieszać z sosem)<br /><br />
+        <img src="images/mac-2.jpg" /><br />
+        Na patelni rozpuść masło (na średnim ogniu może być). Zmniejsz ogień na
+        mały (zrobi się wtedy dużo mniej grudek) i wsyp mąkę. Mieszaj dopóki
+        składniki się nie zmieszają (wszelakie grudki możesz rozdziabdziać
+        łyżką). Wlej mleko i poczekaj (mieszając co jakiś czas) aż sosik
+        zgęstnieje. Możesz zwiększyć lekko ogień, aby mleko szybciej zgęstniało,
+        ale nie przesadź.<br /><br />
+        <img src="images/mac-3.jpg" /><br />
+        To jest idealny moment aby dodać pieprz. Ciężko przesadzić, więc możesz
+        dawać ile chcesz, ale pamiętaj, że ma go być sporo (nawet jak nie
+        chcesz). Wymieszaj i dodaj sera.<br /><br />
+        <img src="images/mac-4.jpg" /><br />
+        Mieszaj aż ser się rozpuści tworząc kremowy sosik i dodaj (odcedzony!)
+        makaron. Wymieszaj i chwilę grzej jeszcze, aby makaron przesiąkł
+        sosikiem.<br /><br />
+        <img src="images/mac-5.jpg" /><br />
+
+        <button onclick="goBack()">Wróć</button>
+      </div>
+      <div id="no-cat" style="display: none">
+        <video autoplay muted loop>
+          <source src="images/cat-no.mp4" type="video/mp4" />
+          Your browser does not support the video tag.</video
+        ><br />
+
+        <button onclick="goBack()">Wróć</button>
+      </div>
+
+      <script src="przepis.js"></script>
+    </section>
+
+    <footer>Piotr Świerzy</footer>
+  </body>
+</html>
