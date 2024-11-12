@@ -5,10 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>AAAAAAAAAAAAAAAAAAA</h1>
+      <h1>MAKENCZIZ.PL</h1>
       <div align="right">
         <div class="clock" id="clock">15:59:23</div>
       </div>
@@ -48,16 +54,19 @@
             id="email"
             pattern="*@*.*"
             size="50"
+            placeholder="twoj@email.pl"
             required
           /><br />
 
           <label for="temat">Temat:</label><br />
           <input type="radio" id="t1" name="temat" value="t1" required />
-          <label for="t1">Temat 1</label><br />
+          <label for="t1">Ser mi się nie topi. Co zrobić?</label><br />
           <input type="radio" id="t2" name="temat" value="t2" required />
-          <label for="t2">Temat 2</label><br />
+          <label for="t2">Podziękowanie za znakomity przepis!</label><br />
           <input type="radio" id="t3" name="temat" value="t3" required />
-          <label for="t3">Temat 3</label><br />
+          <label for="t3">Mąka się zgrudkowała. Helmp!</label><br />
+          <input type="radio" id="t4" name="temat" value="t4" required />
+          <label for="t4">Inne. Napisz w</label><br />
 
           <label for="mess">Wiadomość:</label><br />
           <textarea
@@ -67,6 +76,7 @@
             size="50"
             rows="4"
             cols="50"
+            placeholder="Twoja wiadomość"
           ></textarea
           ><br />
 
