@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator haseł</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>WYGENERUJ SOBIE HASŁO</h2>
+    <form>
+      <label>Minimalna długość hasła</label><br />
+      <input type="number" id="min_len" value="8" required />
+      <br /><br />
+      <label>Maksymalna długość hasła</label><br />
+      <input type="number" id="max_len" value="20" required />
+      <br /><br />
+      <label>Wielkie litery?</label><br />
+      <input type="checkbox" id="big" checked />
+      <br /><br />
+      <label>Znaki specjalne?</label><br />
+      <input type="checkbox" id="spec" />
+      <br /><br />
+      <button type="button" onclick="generate()">Wygeneruj hasło</button>
+    </form>
+    <script src="hasla.js"></script>
+
+    <br /><br />
+    <a href="index.html">powrót</a>
+  </body>
+</html>
