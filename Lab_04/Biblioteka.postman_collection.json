@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "a256d50d-12f8-43db-8a2a-4f44e591f2fa",
+		"name": "Biblioteka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40273712"
+	},
+	"item": [
+		{
+			"name": "Pobierz książki",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Pobierz książkę z id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Dodaj książkę",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let bookName = pm.environment.replaceIn(\"{{$randomProductName}}\");\r",
+							"let author = pm.environment.replaceIn(\"{{$randomFullName}}\");\r",
+							"let year = Math.floor(1900 + pm.environment.replaceIn(\"{{$randomInt}}\")/9);\r",
+							"\r",
+							"pm.environment.set(\"title\", bookName);\r",
+							"pm.environment.set(\"author\", author);\r",
+							"pm.environment.set(\"year\", year);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/books",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuń książkę",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Rejestracja",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Pobierz zamówienia",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Dodaj zamówienie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Usuń zamówienie",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Edytuj ilość",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
