@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
 const Logowanie: React.FC = () => {
-  // Stany dla wszystkich pól tekstowych
   const [nazwaUzytkownika, setNazwaUzytkownika] = useState<string>("");
   const [haslo, setHaslo] = useState<string>("");
   const [powtorzHaslo, setPowtorzHaslo] = useState<string>("");
 
-  // Obsługa zmian w inputach
   const handleNazwaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNazwaUzytkownika(e.target.value);
   };
@@ -19,12 +17,10 @@ const Logowanie: React.FC = () => {
     setPowtorzHaslo(e.target.value);
   };
 
-  // Funkcja sprawdzająca, czy przycisk Logowanie powinien być wyłączony
   const isButtonDisabled = (): boolean => {
     return !nazwaUzytkownika || !haslo || !powtorzHaslo;
   };
 
-  // Obsługa kliknięcia przycisku Logowanie
   const handleLogin = () => {
     if (haslo !== powtorzHaslo) {
       alert("Hasła nie są zgodne");

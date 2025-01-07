@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const Haslo: React.FC = () => {
-  const [firstPasswrd, setFirst] = useState<string>("");
-  const [secondPasswrd, setSecond] = useState<string>("");
+  const [haslo, setFirst] = useState<string>("");
+  const [powtorzHaslo, setSecond] = useState<string>("");
 
   const handleChangeInFirst = (txt: React.ChangeEvent<HTMLInputElement>) => {
     setFirst(txt.target.value);
@@ -12,8 +12,8 @@ const Haslo: React.FC = () => {
   };
 
   const getMess = (): string => {
-    if (!firstPasswrd && !secondPasswrd) return "Proszę wprowadzić hasło";
-    if (firstPasswrd !== secondPasswrd) return "Hasła nie są zgodne";
+    if (!haslo && !powtorzHaslo) return "Proszę wprowadzić hasło";
+    if (haslo !== powtorzHaslo) return "Hasła nie są zgodne";
     return "";
   };
 
@@ -22,7 +22,7 @@ const Haslo: React.FC = () => {
       <h1>Sprawdzanie hasła</h1>
       <input
         type="text"
-        value={firstPasswrd}
+        value={haslo}
         onChange={handleChangeInFirst}
         placeholder="Wpisz hasło"
         style={{
@@ -34,7 +34,7 @@ const Haslo: React.FC = () => {
       />
       <input
         type="text"
-        value={secondPasswrd}
+        value={powtorzHaslo}
         onChange={handleChangeInSecond}
         placeholder="Powtórz hasło"
         style={{

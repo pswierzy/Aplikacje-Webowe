@@ -1,10 +1,10 @@
 import React from "react";
-import Logowanie from "./components/formularze/Logowanie.tsx";
+import Komentarze from "./components/produkty/Komentarze.tsx";
 
 const App: React.FC = () => {
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <Logowanie />
+    <div style={{ padding: "20px" }}>
+      <Komentarze />
     </div>
   );
 };
